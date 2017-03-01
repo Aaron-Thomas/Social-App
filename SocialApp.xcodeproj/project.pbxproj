@@ -13,6 +13,11 @@
 		4001C69B1E64EE7300919FE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4001C69A1E64EE7300919FE6 /* Assets.xcassets */; };
 		4001C69E1E64EE7300919FE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4001C69C1E64EE7300919FE6 /* LaunchScreen.storyboard */; };
 		4001C6A61E64EF9000919FE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4001C6A51E64EF9000919FE6 /* GoogleService-Info.plist */; };
+		4001C6AB1E67851C00919FE6 /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6AA1E67851C00919FE6 /* UpdateView.swift */; };
+		4001C6AE1E6785A400919FE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6AD1E6785A400919FE6 /* Constants.swift */; };
+		4001C6B01E67878F00919FE6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6AF1E67878F00919FE6 /* RoundButton.swift */; };
+		4001C6B21E67891B00919FE6 /* UpdateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6B11E67891B00919FE6 /* UpdateField.swift */; };
+		4001C6B41E678A6A00919FE6 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6B31E678A6A00919FE6 /* SignInButton.swift */; };
 		BC72364AC4E3CA78105277EB /* Pods_SocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CCD883588FE05C8A040720 /* Pods_SocialApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,11 @@
 		4001C69D1E64EE7300919FE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4001C69F1E64EE7400919FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4001C6A51E64EF9000919FE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4001C6AA1E67851C00919FE6 /* UpdateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
+		4001C6AD1E6785A400919FE6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4001C6AF1E67878F00919FE6 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		4001C6B11E67891B00919FE6 /* UpdateField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateField.swift; sourceTree = "<group>"; };
+		4001C6B31E678A6A00919FE6 /* SignInButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		49CCD883588FE05C8A040720 /* Pods_SocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,6 +73,7 @@
 		4001C6921E64EE7300919FE6 /* SocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				4001C6AC1E67858F00919FE6 /* Utilities */,
 				4001C6A91E64F20C00919FE6 /* Model */,
 				4001C6A81E64F20300919FE6 /* View */,
 				4001C6A71E64F1FC00919FE6 /* Controller */,
@@ -87,6 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				4001C6951E64EE7300919FE6 /* SignInVC.swift */,
+				4001C6AA1E67851C00919FE6 /* UpdateView.swift */,
+				4001C6AF1E67878F00919FE6 /* RoundButton.swift */,
+				4001C6B11E67891B00919FE6 /* UpdateField.swift */,
+				4001C6B31E678A6A00919FE6 /* SignInButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -96,6 +111,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		4001C6AC1E67858F00919FE6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4001C6AD1E6785A400919FE6 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		5383AD327CCA40B6B28E9B5C /* Pods */ = {
@@ -240,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4001C6B41E678A6A00919FE6 /* SignInButton.swift in Sources */,
 				4001C6961E64EE7300919FE6 /* SignInVC.swift in Sources */,
+				4001C6B21E67891B00919FE6 /* UpdateField.swift in Sources */,
+				4001C6B01E67878F00919FE6 /* RoundButton.swift in Sources */,
+				4001C6AB1E67851C00919FE6 /* UpdateView.swift in Sources */,
 				4001C6941E64EE7300919FE6 /* AppDelegate.swift in Sources */,
+				4001C6AE1E6785A400919FE6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
