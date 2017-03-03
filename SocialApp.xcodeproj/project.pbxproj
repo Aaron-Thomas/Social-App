@@ -19,6 +19,7 @@
 		4001C6B21E67891B00919FE6 /* UpdateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6B11E67891B00919FE6 /* UpdateField.swift */; };
 		4001C6B41E678A6A00919FE6 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6B31E678A6A00919FE6 /* SignInButton.swift */; };
 		4001C6B71E68D3EF00919FE6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4001C6B61E68D3EF00919FE6 /* Default-568h@2x.png */; };
+		4001C6B91E68E6E000919FE6 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6B81E68E6E000919FE6 /* FeedVC.swift */; };
 		BC72364AC4E3CA78105277EB /* Pods_SocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CCD883588FE05C8A040720 /* Pods_SocialApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		4001C6B31E678A6A00919FE6 /* SignInButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		4001C6B51E68CD9B00919FE6 /* SocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialApp.entitlements; sourceTree = "<group>"; };
 		4001C6B61E68D3EF00919FE6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4001C6B81E68E6E000919FE6 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		49CCD883588FE05C8A040720 /* Pods_SocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 		4001C6A71E64F1FC00919FE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4001C6B81E68E6E000919FE6 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				4001C6961E64EE7300919FE6 /* SignInVC.swift in Sources */,
 				4001C6B21E67891B00919FE6 /* UpdateField.swift in Sources */,
 				4001C6B01E67878F00919FE6 /* RoundButton.swift in Sources */,
+				4001C6B91E68E6E000919FE6 /* FeedVC.swift in Sources */,
 				4001C6AB1E67851C00919FE6 /* UpdateView.swift in Sources */,
 				4001C6941E64EE7300919FE6 /* AppDelegate.swift in Sources */,
 				4001C6AE1E6785A400919FE6 /* Constants.swift in Sources */,
