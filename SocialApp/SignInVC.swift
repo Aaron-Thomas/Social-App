@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UpdateField!
     @IBOutlet weak var passwordField: UpdateField!
@@ -20,7 +20,16 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.emailField.delegate = self
+        self.passwordField.delegate = self
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.defaultKeychainWrapper.string(forKey: KEY_UID) {
@@ -55,7 +64,8 @@ class SignInVC: UIViewController {
             } else {
                 print("AARON: Successfully authenticated with Firebase")
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
             }
 })
@@ -67,7 +77,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("AARON: Email user authenticated with Firebase")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                         let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -76,7 +87,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("AARON: Successfully authenticated with Firebase")
                             if let user = user {
-                                self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -85,7 +97,8 @@ class SignInVC: UIViewController {
         }
     }
     
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(id, forKey: KEY_UID)
         print("AARON: Data save to keychain \(keychainResult)")
         performSegue(withIdentifier: "goToFeed", sender: nil)

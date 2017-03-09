@@ -22,6 +22,8 @@
 		4001C6B91E68E6E000919FE6 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6B81E68E6E000919FE6 /* FeedVC.swift */; };
 		4001C6BB1E6A265F00919FE6 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6BA1E6A265F00919FE6 /* CircleView.swift */; };
 		4001C6BD1E6A301F00919FE6 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6BC1E6A301F00919FE6 /* PostCell.swift */; };
+		4001C6C01E6B776400919FE6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6BF1E6B776400919FE6 /* DataService.swift */; };
+		4001C6C21E6CAFC500919FE6 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4001C6C11E6CAFC500919FE6 /* Post.swift */; };
 		BC72364AC4E3CA78105277EB /* Pods_SocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CCD883588FE05C8A040720 /* Pods_SocialApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		4001C6B81E68E6E000919FE6 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		4001C6BA1E6A265F00919FE6 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		4001C6BC1E6A301F00919FE6 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		4001C6BF1E6B776400919FE6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4001C6C11E6CAFC500919FE6 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		49CCD883588FE05C8A040720 /* Pods_SocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 		4001C6921E64EE7300919FE6 /* SocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				4001C6BE1E6B774000919FE6 /* Services */,
 				4001C6B51E68CD9B00919FE6 /* SocialApp.entitlements */,
 				4001C6AC1E67858F00919FE6 /* Utilities */,
 				4001C6A91E64F20C00919FE6 /* Model */,
@@ -123,6 +128,7 @@
 		4001C6A91E64F20C00919FE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4001C6C11E6CAFC500919FE6 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -133,6 +139,14 @@
 				4001C6AD1E6785A400919FE6 /* Constants.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4001C6BE1E6B774000919FE6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4001C6BF1E6B776400919FE6 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		5383AD327CCA40B6B28E9B5C /* Pods */ = {
@@ -286,8 +300,10 @@
 				4001C6BB1E6A265F00919FE6 /* CircleView.swift in Sources */,
 				4001C6B41E678A6A00919FE6 /* SignInButton.swift in Sources */,
 				4001C6961E64EE7300919FE6 /* SignInVC.swift in Sources */,
+				4001C6C21E6CAFC500919FE6 /* Post.swift in Sources */,
 				4001C6B21E67891B00919FE6 /* UpdateField.swift in Sources */,
 				4001C6B01E67878F00919FE6 /* RoundButton.swift in Sources */,
+				4001C6C01E6B776400919FE6 /* DataService.swift in Sources */,
 				4001C6B91E68E6E000919FE6 /* FeedVC.swift in Sources */,
 				4001C6AB1E67851C00919FE6 /* UpdateView.swift in Sources */,
 				4001C6941E64EE7300919FE6 /* AppDelegate.swift in Sources */,
@@ -419,6 +435,7 @@
 				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = 7D8A6696Q9;
 				INFOPLIST_FILE = SocialApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.InteractiveCode.SocialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +451,7 @@
 				CODE_SIGN_ENTITLEMENTS = SocialApp/SocialApp.entitlements;
 				DEVELOPMENT_TEAM = 7D8A6696Q9;
 				INFOPLIST_FILE = SocialApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.InteractiveCode.SocialApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
